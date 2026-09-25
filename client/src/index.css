@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-primary-50: #f0fdf4;
+  --color-brand-primary-100: #dcfce7;
+  --color-brand-primary-200: #bbf7d0;
+  --color-brand-primary-300: #86efac;
+  --color-brand-primary-400: #4ade80;
+  --color-brand-primary-500: #10b981;
+  --color-brand-primary-600: #059669;
+  --color-brand-primary-700: #047857;
+  --color-brand-primary-800: #065f46;
+  --color-brand-primary-900: #064e3b;
+  --color-brand-primary-950: #022c22;
+
+  --color-brand-gold-50: #fdfbf3;
+  --color-brand-gold-100: #faeed0;
+  --color-brand-gold-200: #f5dc9e;
+  --color-brand-gold-300: #ecc266;
+  --color-brand-gold-400: #e3a936;
+  --color-brand-gold-500: #ca8a04;
+  --color-brand-gold-600: #a16207;
+  --color-brand-gold-700: #854d0e;
+  --color-brand-gold-800: #713f12;
+  --color-brand-gold-900: #583210;
+
+  --color-brand-dark-bg: #09120e;
+  --color-brand-dark-surface: #102118;
+  --color-brand-dark-elevated: #162b20;
+  --color-brand-dark-border: #1e3a2b;
+}
+
+@layer base {
+  :root {
+    --bg-app: #f7faf8;
+    --text-app: #0f172a;
+  }
+
+  html.dark {
+    --bg-app: #09120e;
+    --text-app: #f1f5f3;
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: var(--text-app);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
